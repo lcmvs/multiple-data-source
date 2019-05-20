@@ -1,0 +1,24 @@
+spring:
+  datasource:
+    type: com.zaxxer.hikari.HikariDataSource
+
+#primary 主数据库
+db1:
+  mapper: classpath:mapper/primary/*.xml
+  url: jdbc:mysql://localhost:3306/test?useUnicode=true&characterEncoding=utf-8&autoReconnect=true&allowMultiQueries=true&useSSL=false&serverTimezone=GMT%2B8&tinyInt1isBit=true
+  driverClassName: com.mysql.cj.jdbc.Driver
+  username:
+  password:
+  hikari:
+    idleTimeout: 30000
+    maximumPoolSize: 10
+
+db2:
+  mapper: classpath:mapper/db2/*.xml
+  url: jdbc:mysql://localhost:3306/test?useUnicode=true&characterEncoding=utf-8&autoReconnect=true&allowMultiQueries=true&useSSL=false&serverTimezone=GMT%2B8&tinyInt1isBit=true
+  driverClassName: com.mysql.cj.jdbc.Driver
+  username:
+  password:
+  hikari:
+    idleTimeout: 30000
+    maximumPoolSize: 10
